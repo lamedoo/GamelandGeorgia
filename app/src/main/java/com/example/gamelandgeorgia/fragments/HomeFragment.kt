@@ -1,7 +1,6 @@
 package com.example.gamelandgeorgia.fragments
 
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,21 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamelandgeorgia.R
 import com.example.gamelandgeorgia.helpers.PostsAdapter
-import com.example.gamelandgeorgia.models.AllPosts
 import com.example.gamelandgeorgia.models.AllPostsNew
 import com.example.gamelandgeorgia.services.PostService
 import com.example.gamelandgeorgia.services.ServiceBuilder
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.fragment_home.*
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.GET
-import java.lang.reflect.Type
-import java.net.URL
 
 class HomeFragment : Fragment() {
 

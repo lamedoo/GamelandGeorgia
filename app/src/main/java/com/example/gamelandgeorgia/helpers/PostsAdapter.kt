@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamelandgeorgia.R
-import com.example.gamelandgeorgia.models.AllPosts
 import com.example.gamelandgeorgia.models.AllPostsNew
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.post_item.view.*

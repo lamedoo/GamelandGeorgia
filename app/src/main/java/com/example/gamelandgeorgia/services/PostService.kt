@@ -1,6 +1,5 @@
 package com.example.gamelandgeorgia.services
 
-import com.example.gamelandgeorgia.models.AllPosts
 import com.example.gamelandgeorgia.models.AllPostsNew
 import retrofit2.Call
 import retrofit2.http.GET
