@@ -3,5 +3,6 @@
     <color name="colorPrimary">#f64118</color>
     <color name="colorPrimaryDark">#f64118</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="bottom_menu_items">#333333</color>
+    <color name="colorAccentDark">#333333</color>
+    <color name="colorAccentLight">#a0a5aa</color>
 </resources>

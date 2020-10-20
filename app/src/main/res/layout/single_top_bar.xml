@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/post_single_topBar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorAccentDark"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ib_post_single_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/back_button"/>
+
+    <ImageView
+        android:id="@+id/ib_post_single_logo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/logo_small"/>
+
+    <ImageView
+        android:id="@+id/ib_post_comment"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:paddingRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/comment_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

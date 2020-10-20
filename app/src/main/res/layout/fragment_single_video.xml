@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SingleVideoFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/video_single_container"
+    android:orientation="vertical">
+
+    <include layout="@layout/single_top_bar"/>
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/yt_video_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:autoPlay="false"
+        app:useWebUi="false"
+        app:showFullScreenButton="false"/>
+
+    <ScrollView
+        android:id="@+id/sv_video_single"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_video_single_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/georgian_uppercase"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                tools:text="Post Title" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/tv_video_single_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/georgian_uppercase"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="Author"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-ს მიერ"
+                    android:fontFamily="@font/georgian_uppercase"
+                    android:textColor="@color/colorAccentLight"
+                    app:layout_constraintLeft_toRightOf="@id/tv_video_single_author"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_video_single_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="DATE"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                tools:layout_marginBottom="10dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/post_container" />
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
+                android:id="@+id/tv_video_single_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:textColorLink="@color/colorPrimary"
+                android:layout_marginBottom="20dp"
+                tools:text="Post Content" />
+
+            <View
+                android:id="@+id/video_single_game_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                tools:layout_marginBottom="10dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/post_container"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <include layout="@layout/single_post_game_info" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

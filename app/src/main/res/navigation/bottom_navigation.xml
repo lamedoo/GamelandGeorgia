@@ -6,22 +6,22 @@
     app:startDestination="@id/menu_home">
     <fragment
         android:id="@+id/menu_home"
-        android:name="com.example.gamelandgeorgia.fragments.HomeFragment"
+        android:name="com.lukakordzaia.gamelandgeorgia.fragments.HomeFragment"
         android:label="Main Page"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/menu_review"
-        android:name="com.example.gamelandgeorgia.fragments.ReviewFragment"
+        android:name="com.lukakordzaia.gamelandgeorgia.fragments.ReviewFragment"
         android:label="Game Reviews"
         tools:layout="@layout/fragment_review" />
     <fragment
         android:id="@+id/menu_video"
-        android:name="com.example.gamelandgeorgia.fragments.VideoFragment"
+        android:name="com.lukakordzaia.gamelandgeorgia.fragments.VideoFragment"
         android:label="Videos"
         tools:layout="@layout/fragment_video" />
     <fragment
         android:id="@+id/menu_game"
-        android:name="com.example.gamelandgeorgia.fragments.GameFragment"
+        android:name="com.lukakordzaia.gamelandgeorgia.fragments.StoreFragment"
         android:label="Game Catalogue"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_store" />
 </navigation>

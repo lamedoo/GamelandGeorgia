@@ -7,7 +7,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/post_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -18,30 +18,173 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/iv_post_image"
-            android:layout_width="match_parent"
-            android:layout_height="204dp"
-            android:background="@drawable/image_holder"
-            android:contentDescription="Post Image" />
-
         <TextView
             android:id="@+id/tv_post_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:paddingBottom="10dp"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:fontFamily="@font/georgian_uppercase"
+            android:textSize="18sp"
             android:textStyle="bold"
             tools:text="Post Title" />
 
+        <FrameLayout
+            android:id="@+id/fl_post_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/image_holder"
+                android:contentDescription="Post Image" />
+
+            <ImageView
+                android:id="@+id/iv_post_image_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="#23000000"
+                android:contentDescription="Review container"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tv_post_review_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:background="@drawable/review_score_border"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="10"/>
+
+            <ImageView
+                android:id="@+id/iv_post_video_icon"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:contentDescription="Video Image"
+                android:src="@mipmap/video_icon"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </FrameLayout>
+
+<!--        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView-->
+<!--            android:id="@+id/youtube_player_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:useWebUi="true"-->
+<!--            app:showFullScreenButton="false"-->
+<!--            android:visibility="gone"/>-->
+
+        <TextView
+            android:id="@+id/tv_post_excerpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="Post Excerpt"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/ll_read_more_post"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_read_more"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/georgian_uppercase"
+                    android:text="წაკითხვა"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_read_more_video"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_bottom_video"
+                    app:tint="@color/colorAccentLight"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/georgian_uppercase"
+                    android:text="ნახვა"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/share_button"
+                    app:tint="@color/colorAccentLight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/georgian_uppercase"
+                    android:text="გაზიარება"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/post_container" />
+
     </LinearLayout>
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

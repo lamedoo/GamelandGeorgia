@@ -7,10 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".activities.MainActivity">
 
-        <fragment
-            app:navGraph="@navigation/bottom_navigation"
-            app:defaultNavHost="true"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+        <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -30,9 +27,9 @@
             app:itemBackground="@android:color/white"
             app:itemIconTint="@color/selector_nav_item"
             app:itemTextColor="@color/selector_nav_item"
-            app:itemIconSize="24dp"
-            android:elevation="2dp"
-            app:labelVisibilityMode="labeled"
+            app:itemIconSize="30sp"
+            app:labelVisibilityMode="unlabeled"
+            android:visibility="visible"
             app:menu="@menu/menu_bottom_navigation"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

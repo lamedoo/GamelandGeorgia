@@ -2,14 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_home"
-        android:title="@string/bottom_navigation_home"
-        android:icon="@drawable/ic_bottom_home" />
-
-    <item
         android:id="@+id/menu_review"
         android:title="@string/bottom_navigation_review"
-        android:icon="@drawable/ic_bottom_review" />
+        android:icon="@drawable/ic_bottom_reviews" />
 
     <item
         android:id="@+id/menu_video"
@@ -17,8 +12,18 @@
         android:icon="@drawable/ic_bottom_video" />
 
     <item
-        android:id="@+id/menu_game"
+        android:id="@+id/menu_home"
+        android:title="@string/bottom_navigation_home"
+        android:icon="@drawable/logo_small" />
+
+    <item
+        android:id="@+id/menu_store"
         android:title="@string/bottom_navigation_game"
-        android:icon="@drawable/ic_bottom_game" />
+        android:icon="@drawable/ic_bottom_store" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:title="@string/bottom_navigation_profile"
+        android:icon="@drawable/ic_bottom_account" />
 
 </menu>

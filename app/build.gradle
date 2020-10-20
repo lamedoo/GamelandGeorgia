@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.gamelandgeorgia"
-        minSdkVersion 16
+        applicationId "com.lukakordzaia.gamelandgeorgia"
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -31,7 +32,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation 'org.sufficientlysecure:html-textview:4.0'
     implementation "com.google.code.gson:gson:2.8.6"
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation "com.google.android.material:material:1.2.1"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
@@ -44,5 +47,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
-
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation "androidx.room:room-runtime:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
 }
